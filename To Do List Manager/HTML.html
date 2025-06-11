@@ -1,0 +1,99 @@
+ <!DOCTYPE html>
+
+<html>
+  <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/4fc277f2c8.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body id = "body" class = "bg-[#f9fbfa] transition-colors duration-500">
+    <button id = "toggle" class = "self-end rounded-sm bg-amber-300">Toggle Theme</button>
+    <div id = "head">
+        <h1 class="text-center mb-4">
+        <i class="fa-regular fa-square-check"></i> Todo List
+      </h1>
+    </div>
+    <div
+      class="bg-white pt-8 grid grid-cols-1 w-max mx-auto pt-4 rounded-lg p-6"
+    >
+      <form id="form" class="flex flex-col gap-4">
+        <div>
+          <label for="task_title">Task Title</label>
+          <br />
+          <input
+            type="text"
+            id="task_title"
+            placeholder="Enter Task Title"
+            class="w-[400px] bg-white rounded-md p-2 mt-1"
+          />
+          <br />
+          <label for="priority" class="mt-2 inline-block">Priority</label>
+        </div>
+        <div>
+          <select
+            id="priority"
+            class="w-[400px] bg-white rounded-md p-2"
+          >
+            <option value="High">High</option>
+            <option value="Medium" selected>Medium</option>
+            <option value="Low">Low</option>
+          </select>
+        </div>
+        <div>
+          <label for="myDate">Deadline</label>
+          <br />
+          <input
+            type="date"
+            id="myDate"
+            class="w-[400px] bg-white rounded-md p-2 mt-1"
+          />
+          <button onclick="showDate()" class="hidden"></button>
+          <p id="output" class="mt-2"></p>
+        </div>
+        <div class="self-end">
+          <button class="bg-blue-500 p-2 px-4 rounded-md" >
+            <span class="text-white">+</span> Add Task
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="grid grid-cols-2 gap-6 w-max mx-auto p-6 mt-3">
+  
+        <div>
+            <label for="status">Status</label>
+            <br />
+            <select
+            id="status"
+            class="w-[220px] bg-white rounded-md p-2"
+            >
+        <option value="Done">Done</option>
+        <option value="Pending">Pending</option>
+        <option value="Going On">Going On</option>
+        <option value="All" selected>All</option>
+        </select>
+        </div>
+
+  
+        <div>
+            <label for="Priority">Priority</label>
+            <br />
+            <select
+            id="Priority"
+            class="w-[220px] bg-white rounded-md p-2"
+            >
+            <option value="All" selected>All</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+            <option value="Low">Low</option>
+            </select>
+        </div>
+        </div>
+        <div class="grid grid-cols-1 gap-6 w-max mx-auto p-6 mt-3">
+
+        </div>
+
+    <script src="Javascript.js"></script>
+  </body>
+</html>
